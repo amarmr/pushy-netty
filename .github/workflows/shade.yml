@@ -1,0 +1,29 @@
+name: Shade Pushy and Netty
+
+on:
+  workflow_dispatch:
+
+jobs:
+  shade:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout pushy-netty repo
+        uses: actions/checkout@v3
+
+      - name: Clone Pushy and Netty
+        run: |
+          git clone --branch v0.15.2 https://github.com/jchambers/pushy.git external/pushy
+          git clone --branch netty-4.1.119.Final https://github.com/netty/netty.git external/netty
+
+      - name: Run shading script
+        run: |
+          chmod +x shade-imports.sh
+          ./shade-imports.sh
+
+      - name: Commit shaded code
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add src/main/java/pushynetty/
+          git commit -m "Add shaded Pushy and Netty code"
+          git push
