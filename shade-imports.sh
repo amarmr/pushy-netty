@@ -4,7 +4,7 @@ set -e
 echo "🔧 Starting shading process..."
 
 # Source paths from cloned repos
-PUSHY_SRC="external/pushy/src/main/java/com/eatthepath"
+PUSHY_SRC="external/pushy/pushy/src/main/java/com/eatthepath"
 NETTY_SRC="external/netty/handler/src/main/java/io/netty"
 
 # Target paths in your repo
