@@ -12,7 +12,7 @@ jobs:
 
       - name: Clone Pushy and Netty
         run: |
-          git clone --branch v0.15.2 https://github.com/jchambers/pushy.git external/pushy
+          git clone --branch pushy-0.15.4 https://github.com/jchambers/pushy.git external/pushy
           git clone --branch netty-4.1.119.Final https://github.com/netty/netty.git external/netty
 
       - name: Run shading script
