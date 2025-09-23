@@ -27,3 +27,18 @@ jobs:
           git add src/main/java/pushynetty/
           git commit -m "Add shaded Pushy and Netty code"
           git push
+
+      - name: Set up Maven
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Build shaded JAR with Maven
+        run: mvn clean package
+
+      - name: Upload shaded JAR
+        uses: actions/upload-artifact@v3
+        with:
+          name: pushy-netty-shaded
+          path: target/pushy-netty-shaded-1.0.0.jar
