@@ -14,6 +14,7 @@ jobs:
           java-version: '17'
 
       - name: Build shaded JAR with Maven
+        working-directory: ${{ github.workspace }}
         run: mvn clean package
 
       - name: Upload shaded JAR
