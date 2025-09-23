@@ -12,11 +12,14 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-
+      
+      - name: Debug workspace contents
+        run: |
+          echo "Workspace is: ${{ github.workspace }}"
+  
       - name: Build shaded JAR with Maven
-        working-directory: ${{ github.workspace }}
-        run: mvn clean package
-
+        run: mvn -f ${{ github.workspace }}/pom.xml clean package
+        
       - name: Upload shaded JAR
         uses: actions/upload-artifact@v4
         with:
