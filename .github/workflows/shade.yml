@@ -38,7 +38,7 @@ jobs:
         run: mvn clean package
 
       - name: Upload shaded JAR
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: pushy-netty-shaded
           path: target/pushy-netty-shaded-1.0.0.jar
