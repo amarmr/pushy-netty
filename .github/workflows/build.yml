@@ -1,8 +1,17 @@
-- name: Build shaded JAR with Maven
-  run: mvn clean package
+name: Shade Pushy and Netty
 
-- name: Upload shaded JAR
-  uses: actions/upload-artifact@v3
-  with:
-    name: pushy-netty-shaded
-    path: target/pushy-netty-shaded-1.0.0.jar
+on:
+  workflow_dispatch:
+
+jobs:
+  shade:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build shaded JAR with Maven
+        run: mvn clean package
+
+      - name: Upload shaded JAR
+        uses: actions/upload-artifact@v3
+        with:
+          name: pushy-netty-shaded
+          path: target/pushy-netty-shaded-1.0.0.jar
