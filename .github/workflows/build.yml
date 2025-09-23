@@ -7,6 +7,9 @@ jobs:
   shade:
     runs-on: ubuntu-latest
     steps:
+      - name: Re-checkout repo after commit
+        uses: actions/checkout@v3
+        
       - name: Set up Maven
         uses: actions/setup-java@v3
         with:
