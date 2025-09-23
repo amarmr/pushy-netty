@@ -16,12 +16,5 @@ jobs:
       - name: Debug workspace contents
         run: |
           echo "Workspace is: ${{ github.workspace }}"
+          ls -lR ${{ github.workspace }}
   
-      - name: Build shaded JAR with Maven
-        run: mvn -f ${{ github.workspace }}/pom.xml clean package
-        
-      - name: Upload shaded JAR
-        uses: actions/upload-artifact@v4
-        with:
-          name: pushy-netty-shaded
-          path: target/pushy-netty-shaded-1.0.0.jar
