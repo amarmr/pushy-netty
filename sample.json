@@ -1,0 +1,8 @@
+{
+  "Servers": [
+    {
+      "Version": "mdm-byod",
+      "BaseURL": "https://win-7488.csez.zohocorpin.com:8383/mdm/client/v0/enroll/accountdrivenuserenrollmentredirect/74656d706c617465546f6b656e3d346338353964376263353866303835346136633834623761633536373066303726656e636170694b65793d613366666533353226616374696f6e3d73657276696365"
+    }
+  ]
+}
