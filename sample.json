@@ -1,8 +1,1 @@
-{
-  "Servers": [
-    {
-      "Version": "mdm-byod",
-      "BaseURL": "https://win-7488.csez.zohocorpin.com:9383/mdm/client/v1/enroll?templateToken=4c859d7bc58f0854a6c84b7ac5670f07&encapiKey=a3ffe352"
-    }
-  ]
-}
+{"Servers":[{"Version":"mdm-byod","BaseURL":"https://amar-7488.csez.zohocorpin.com:443/mdm/client/v1/enroll?encapiKey=1G8rvZw75MhNkQaNMN%2FtuRgshdcGby%2FLzdEcFj1xiVXWsr7TjzBJBsFxMKDK4wATqXhurqnHuCqbPqXlas0eusk4DOkgEBwGRFdCV48btXTsGvxfg%2FEnq9c%3D&templateToken=73c867d6ad18744c64af9022dddd621b"}]}
