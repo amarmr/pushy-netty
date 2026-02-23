@@ -1,1 +1,1 @@
-{"Servers":[{"Version":"mdm-byod","BaseURL":"https://10.51.210.171:9383/mdm/client/v1/enroll?encapiKey=d7b8fde5&templateToken=9f84af4d67330e6c4685c3e8d2e32d7e"}]}
+{"Servers":[{"Version":"mdm-byod","BaseURL":"https://dhanus-win1.csez.zohocorpin.com:9383/mdm/client/v1/enroll?encapiKey=d7b8fde5&templateToken=9f84af4d67330e6c4685c3e8d2e32d7e"}]}
